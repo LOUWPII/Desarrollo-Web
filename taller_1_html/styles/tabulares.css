@@ -1,0 +1,67 @@
+.titulo_curiosidades{
+    position: relative;         /* Necesario para que ::before se posicione dentro de este elemento */
+    background-image: url("https://www.ayuware.es/blog/wp-content/uploads/2021/08/que-es-tabular-la-informacion.jpg");
+    background-size: cover;     /* La imagen cubre todo el contenedor sin deformarse */
+    background-position: center;/* Centra la imagen */
+    padding: 10px 0;
+}
+
+/* Capa semitransparente que se pone encima de la imagen de fondo
+   pero debajo del texto*/
+.titulo_curiosidades::before {
+    content: "";                /* Obligatorio para que el pseudo-elemento exista */
+    position: absolute;         /* Se posiciona relativo al .principal */
+    inset: 0;                   /* Equivale a top:0; right:0; bottom:0; left:0 — cubre todo */
+    background-color: rgba(0, 0, 0, 0.8); /* negro y nivel de opacidad 0.5 */
+    z-index: 0;                 /* Capa 0: encima de la imagen pero debajo del contenido */
+}
+
+/* Hace que todo el contenido directo de .principal
+   quede por encima del overlay ::before */
+.titulo_curiosidades > * {
+    position: relative;        
+    z-index: 1;                 
+}
+
+.titulo_curiosidades h1{
+    color: skyblue;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.titulo_curiosidades #titulo_pagina{
+    text-align: center;
+
+}
+
+.titulo_curiosidades .menu ul {
+    list-style: none;
+    flex-grow: 1;           
+    display: flex;          
+    justify-content: space-around; 
+    padding: 0;
+    margin: 3px;
+}
+
+
+.titulo_curiosidades .menu a{
+    color: white;
+    font-size: small;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 6px 12px;          
+    border-radius: 4px;        
+    transition: background-color 0.1s, color 0.1s; 
+}
+
+.titulo_curiosidades .menu a:hover {
+    background-color: white;    
+    color: black;               
+}
+
+
+#descripcion_tabulares #texto_tabulares{
+    border: 3px solid black;
+    text-align: justify;
+    border-radius:7px;
+    padding: 5px;
+    margin: 7px;
+}
