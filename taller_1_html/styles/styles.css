@@ -1,6 +1,6 @@
 .principal_curiosidades{
     position: relative;         /* Necesario para que ::before se posicione dentro de este elemento */
-    background-image: url("https://actualidad.universidadunipro.com/wp-content/uploads/2025/12/Mobile_375x169-5.jpg");
+    background-image: url("https://www.hackaboss.com/wp-content/uploads/elementor/thumbs/6852699a3570512fb1f405fa_shahadat-rahman-BfrQnKBulYQ-unsplash-scaled-re9ul2cxqvexr4f6gpu4fp8adsubavkbn0ffo1nki0.jpg");
     background-size: cover;     /* La imagen cubre todo el contenedor sin deformarse */
     background-position: center;/* Centra la imagen */
     padding: 10px 0;
