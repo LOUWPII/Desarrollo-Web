@@ -60,3 +60,38 @@
     background-color: white;    
     color: black;               
 }
+
+section article {
+    width: 100%;
+    margin: 40px 0;  
+    background: linear-gradient(90deg, #669ca7 0%, #c0c0ec 100%);   
+}
+
+
+#modelos-supervisados article, #modelos-no-supervisados article{
+    border: 3px solid black;
+    border-radius: 4px;
+
+}
+
+section article img {
+    width: 400px;          
+    height: 300px;          
+    object-fit: contain;    
+    display: block;
+    margin: 0 auto;  
+}
+
+section article p{
+    text-align: justify;
+    padding: 0 15px;
+}
+
+article h3 {
+    text-align: center;
+}
+
+h1, h2, h3, p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
