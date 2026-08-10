@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap");
+
 .principal_curiosidades{
     position: relative;         /* Necesario para que ::before se posicione dentro de este elemento */
     background-image: url("https://www.hackaboss.com/wp-content/uploads/elementor/thumbs/6852699a3570512fb1f405fa_shahadat-rahman-BfrQnKBulYQ-unsplash-scaled-re9ul2cxqvexr4f6gpu4fp8adsubavkbn0ffo1nki0.jpg");
@@ -24,8 +26,10 @@
 }
 
 .principal_curiosidades h1{
-    color: skyblue;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    font-family:"Poppins";
+    text-decoration: underline;
+    text-decoration-color:skyblue;
 }
 
 .principal_curiosidades #titulo_pagina{
@@ -46,7 +50,7 @@
 .principal_curiosidades .menu a{
     color: white;
     font-size: small;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:"Poppins";
     padding: 6px 12px;          
     border-radius: 4px;        
     transition: background-color 0.1s, color 0.1s; 
@@ -59,7 +63,7 @@
 }
 
 .texto-con-imagenes {       
-    font-family: Arial, sans-serif;
+    font-family:"Poppins";
     line-height: 1.6;
     text-align: justify;    
     padding: 20px;

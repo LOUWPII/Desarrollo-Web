@@ -1,5 +1,5 @@
 
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap");
 
 .principal_algoritmos{
     position: relative;         /* Necesario para que ::before se posicione dentro de este elemento */
@@ -28,7 +28,7 @@
 
 .principal_algoritmos h1{
     color: skyblue;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:"Poppins";
 }
 
 .principal_algoritmos #titulo_pagina{
@@ -49,7 +49,7 @@
 .principal_algoritmos .menu a{
     color: white;
     font-size: small;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:"Poppins";
     padding: 6px 12px;          
     border-radius: 4px;        
     transition: background-color 0.1s, color 0.1s; 
@@ -64,13 +64,13 @@
 section article {
     width: 100%;
     margin: 40px 0;  
-    background: linear-gradient(90deg, #669ca7 0%, #c0c0ec 100%);   
+    background: linear-gradient(90deg, #c4d9ddd8 0%, #8cd5e7 100%);   
 }
 
 
 #modelos-supervisados article, #modelos-no-supervisados article{
     border: 3px solid black;
-    border-radius: 4px;
+    border-radius: 20px;
 
 }
 
@@ -92,6 +92,34 @@ article h3 {
 }
 
 h1, h2, h3, p{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:"Poppins";
     text-align: center;
+}
+
+#indice {
+    padding: 20px 40px;
+}
+
+
+#indice ul {
+    list-style: none;       
+    padding: 0;
+    display: flex;   
+    justify-content: space-around;      
+}
+
+#indice ul li a {
+    display: block;
+    padding: 8px 16px;
+    background-color: #1a1a2e;  
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    font-family: "Poppins";
+}
+
+#indice ul li a:hover {
+    background-color: skyblue;  
+    color: black;
 }

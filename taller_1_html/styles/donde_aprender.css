@@ -50,7 +50,7 @@
 .titulo_curiosidades .menu a{
     color: white;
     font-size: small;
-    font-family:"Poppins";
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 6px 12px;          
     border-radius: 4px;        
     transition: background-color 0.1s, color 0.1s; 
@@ -61,51 +61,7 @@
     color: black;               
 }
 
-
-#descripcion_tabulares #texto_tabulares{
-    text-align: justify;
-    border-radius:7px;
-    padding: 5px;
-    margin: 7px;
-}
-
-#titulo-tabla{
-    text-align: center;
-    font-family:"Poppins";
-}
-
-.tabla_datos {
-    width: 100%;
-    border-collapse: collapse;
+#cursos {
     display: flex;
-    flex-direction: row;
     justify-content: center;
-}
-
-.tabla_datos th,
-.tabla_datos td {
-    border: 1px solid #333;
-    padding: 10px;
-    text-align: center;
-}
-
-.tabla_datos th {
-    background-color: rgb(116, 116, 223);
-    color: white; 
-    font-weight: bold;
-
-}
-
-.tabla_datos tr:nth-child(even) {
-    background-color: white;
-    color: black;
-}
-
-.tabla_datos tr:nth-child(odd) {
-    background-color: #e6f1f7;
-    color: black;
-}
-
-p {
-    font-family:"Poppins";
 }
