@@ -61,7 +61,64 @@
     color: black;               
 }
 
-#cursos {
+h2 {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    margin: 2rem 0 1rem;
+}
+
+#cursos,
+#video {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+/* Cada portada es un enlace sin subrayado */
+#cursos a,
+#video a {
+    text-decoration: none;
+}
+
+#cursos figure {
+    width: 170px;
+    text-align: center;
+    padding: 1rem;
+    border: 0.5px solid black;
+    border-radius: 14px;
+    background: white;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+}
+
+#cursos img,
+#video img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+#cursos figure:hover,
+#video figure:hover {
+    transform: translateY(-4px);
+}
+
+#cursos figcaption,
+#video figcaption {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #333;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+}
+
+
+#video figure{
+    width: 300px;
+    text-align: center;
+    padding: 1rem;
+    border: 0.5px solid black;
+    border-radius: 14px;
+    background: white;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
 }

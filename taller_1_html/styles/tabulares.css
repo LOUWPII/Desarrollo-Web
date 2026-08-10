@@ -87,10 +87,11 @@
     border: 1px solid #333;
     padding: 10px;
     text-align: center;
+    font-family:"Poppins";
 }
 
 .tabla_datos th {
-    background-color: rgb(116, 116, 223);
+    background-color: skyblue;
     color: white; 
     font-weight: bold;
 
