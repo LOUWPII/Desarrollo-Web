@@ -1,0 +1,229 @@
+/* Importa las fuentes Poppins y Roboto desde Google Fonts.
+   Solo se cargan los pesos 400 (normal) y 700 (negrita). */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap");
+
+/* Selector universal: aplica a TODOS los elementos de la página. */
+* {
+    box-sizing: border-box; /* El padding y border se incluyen dentro del ancho/alto del elemento */
+    margin: 0;              /* Elimina los márgenes por defecto del navegador */
+    padding: 0;             /* Elimina los rellenos por defecto del navegador */
+    font-family: Poppins;   /* Usa Poppins como tipografía global */
+}
+
+/* Estilos generales del cuerpo de la página */
+body {
+    background-color: #f4f4f9; /* Fondo gris claro */
+    padding-bottom: 40px;      /* Espacio inferior para evitar que el contenido pegue al final */
+}
+
+/* Encabezado y Carrito */
+.encabezado {
+    display: flex;              /* Activa flexbox */
+    justify-content: space-between; /* Separa el logo y el carrito en extremos opuestos */
+    align-items: center;        /* Centra los elementos verticalmente */
+    background-color: #201f1f;  /* Fondo oscuro */
+    color: white;               /* Texto blanco */
+    padding: 1rem 2rem;         /* Relleno interno (arriba/abajo 1rem, izquierda/derecha 2rem) */
+    position: relative;         /* Referencia para posicionar el carrito flotante */
+}
+
+/* Contenedor del icono y del desplegable del carrito */
+.contenedor-carrito {
+    position: relative; /* Los hijos absolutos se posicionan respecto a este contenedor */
+}
+
+/* Botón con el icono del carrito */
+.icono-carrito {
+    font-size: 1.5rem;  /* Tamaño grande del icono */
+    background: none;   /* Sin fondo */
+    border: none;       /* Sin borde */
+    cursor: pointer;    /* Cambia el cursor a mano al pasar por encima */
+}
+
+/* Carrito flotante (desplegable) */
+.desplegable-carrito {
+    position: absolute;         /* Se posiciona respecto a .contenedor-carrito */
+    right: 0;                   /* Alineado al borde derecho del contenedor */
+    top: 100%;                  /* Justo debajo del botón del carrito */
+    background-color: white;    /* Fondo blanco */
+    color: #333;                /* Texto gris oscuro */
+    border: 1px solid #ccc;     /* Borde gris claro */
+    padding: 1rem;              /* Espacio interno */
+    width: 320px;               /* Ancho fijo del panel */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave */
+    display: none;              /* Oculto por defecto */
+    z-index: 10;                /* Se mantiene por encima de otros elementos */
+}
+
+/* Hover para mostrar carrito: al pasar el mouse sobre el contenedor, se muestra el desplegable */
+.contenedor-carrito:hover .desplegable-carrito {
+    display: block;
+}
+
+/* Tabla del carrito flotante */
+.desplegable-carrito table {
+    width: 100%;                /* Ocupa todo el ancho del desplegable */
+    border-collapse: collapse;  /* Une los bordes de las celdas */
+    margin-bottom: 1rem;        /* Separación inferior antes del botón */
+}
+
+/* Celdas de la tabla del carrito */
+.desplegable-carrito th, .desplegable-carrito td {
+    border-bottom: 1px solid #ddd; /* Línea separadora inferior */
+    padding: 8px;                  /* Espacio interno */
+    text-align: center;            /* Texto centrado */
+    font-size: 0.85rem;            /* Texto un poco más pequeño */
+}
+
+/* Imagen del producto dentro del carrito */
+.imagen-carrito {
+    width: 40px;          /* Ancho fijo pequeño */
+    height: 40px;         /* Alto fijo */
+    object-fit: cover;    /* Recorta la imagen para llenar sin deformarse */
+}
+
+/* Botón para eliminar/limpiar el carrito */
+.btn-peligro {
+    background-color: #e74c3c; /* Fondo rojo */
+    color: white;              /* Texto blanco */
+    border: none;              /* Sin borde */
+    padding: 0.5rem 1rem;      /* Relleno interno */
+    cursor: pointer;           /* Cursor de mano */
+    width: 100%;               /* Ocupa todo el ancho disponible */
+}
+
+/* Portada y Secciones: centraliza el contenido principal */
+.portada, .seccion-tienda, .seccion-agregar-producto {
+    max-width: 900px;  /* Ancho máximo para que no se estire en pantallas grandes */
+    margin: 2rem auto; /* Centrado horizontal y margen vertical */
+    padding: 1rem;     /* Relleno interno */
+    text-align: center;/* Texto centrado */
+}
+
+/* Grilla de Productos */
+.grilla-productos {
+    display: grid;                       /* Distribuye los productos en una grilla */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Columnas adaptables (mínimo 220px cada una) */
+    gap: 1.5rem;                         /* Separación entre tarjetas */
+    margin-top: 1.5rem;                  /* Separación respecto a la sección anterior */
+}
+
+/* Tarjeta de cada producto */
+.tarjeta-producto {
+    background: white;                       /* Fondo blanco */
+    border: 1px solid #ddd;                  /* Borde gris claro */
+    border-radius: 8px;                      /* Esquinas redondeadas */
+    padding: 1rem;                           /* Relleno interno */
+    display: flex;                           /* Flexbox para apilar verticalmente */
+    flex-direction: column;                  /* Elementos en columna */
+    align-items: center;                     /* Centrados horizontalmente */
+}
+
+/* Imagen dentro de la tarjeta de producto */
+.tarjeta-producto img {
+    width: 100%;            /* Ocupa todo el ancho de la tarjeta */
+    height: 140px;          /* Alto fijo */
+    object-fit: cover;      /* Recorta sin deformar */
+    border-radius: 4px;     /* Esquinas ligeramente redondeadas */
+}
+
+/* Lista de características del producto */
+.tarjeta-producto ul {
+    list-style: none;        /* Quita las viñetas */
+    font-size: 0.85rem;      /* Texto pequeño */
+    color: #555;             /* Color gris medio */
+    margin: 0.5rem 0;        /* Margen vertical */
+}
+
+/* Etiqueta del precio */
+.tarjeta-producto .precio {
+    font-weight: bold;  /* Texto en negrita */
+    color: #2c3e50;     /* Azul grisáceo oscuro */
+    margin: 0.5rem 0;   /* Margen vertical */
+}
+
+/* Botón "Agregar" de cada producto */
+.tarjeta-producto button {
+    background-color: #27ae60; /* Fondo verde */
+    color: white;              /* Texto blanco */
+    border: none;              /* Sin borde */
+    padding: 0.5rem 1rem;      /* Relleno interno */
+    border-radius: 4px;        /* Esquinas redondeadas */
+    cursor: pointer;           /* Cursor de mano */
+}
+
+/* Formulario para agregar productos */
+.formulario-producto {
+    background: white;         /* Fondo blanco */
+    padding: 1.5rem;           /* Relleno interno */
+    border-radius: 8px;        /* Esquinas redondeadas */
+    max-width: 400px;          /* Ancho máximo */
+    margin: 0 auto;            /* Centrado horizontal */
+    display: flex;             /* Flexbox */
+    flex-direction: column;    /* Campos apilados verticalmente */
+    gap: 1rem;                 /* Separación entre campos */
+    text-align: left;          /* Texto alineado a la izquierda */
+}
+
+/* Grupo de formulario (etiqueta + input) */
+.grupo-formulario {
+    display: flex;          /* Flexbox */
+    flex-direction: column; /* Etiqueta arriba, input abajo */
+}
+
+/* Campos de texto del formulario */
+.grupo-formulario input {
+    padding: 0.5rem;            /* Relleno interno */
+    border: 1px solid #ccc;     /* Borde gris claro */
+    border-radius: 4px;         /* Esquinas redondeadas */
+}
+
+/* Botón de envío del formulario */
+.formulario-producto button {
+    background-color: #2980b9; /* Fondo azul */
+    color: white;              /* Texto blanco */
+    border: none;              /* Sin borde */
+    padding: 0.75rem;          /* Relleno interno */
+    border-radius: 4px;        /* Esquinas redondeadas */
+    cursor: pointer;           /* Cursor de mano */
+}
+
+/* Feedback visual al hacer clic en cualquier botón de la página */
+.icono-carrito:active,
+.btn-peligro:active,
+.tarjeta-producto button:active,
+.formulario-producto button:active {
+    transform: scale(0.95);         /* Reduce ligeramente el tamaño del botón */
+    filter: brightness(0.85);       /* Oscurece un poco el color al presionar */
+}
+
+/* Notificaciones emergentes (toast) */
+.notificacion {
+    position: fixed;            /* Flota sobre el contenido */
+    top: 20px;                  /* Distancia desde la parte superior */
+    right: 20px;                /* Distancia desde el lado derecho */
+    background-color: #27ae60;  /* Fondo verde (éxito) */
+    color: white;               /* Texto blanco */
+    padding: 0.75rem 1.25rem;   /* Relleno interno */
+    border-radius: 6px;         /* Esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra para resaltar */
+    z-index: 100;               /* Se mantiene encima de todo */
+    animation: aparecer 0.3s ease; /* Animación de entrada */
+}
+
+/* Variante de aviso (advertencia) de las notificaciones */
+.notificacion-aviso {
+    background-color: #e67e22; /* Fondo naranja */
+}
+
+/* Animación con la que aparecen las notificaciones */
+@keyframes aparecer {
+    from {
+        opacity: 0;                 /* Inicia invisible */
+        transform: translateY(-10px); /* Inicia desplazada hacia arriba */
+    }
+    to {
+        opacity: 1;                 /* Termina visible */
+        transform: translateY(0);   /* Termina en su posición normal */
+    }
+}
