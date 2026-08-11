@@ -70,7 +70,7 @@ function mostrarNotificacion(mensaje, tipo = "exito") {
     // 5. La removemos automáticamente después de 2.5 segundos
     setTimeout(() => {
         notificacion.remove();
-    }, 2500);
+    }, 2000);
 }
 
 // ==========================================
@@ -203,7 +203,7 @@ function manejarNuevoProducto(evento) {
     const precio = Number(document.getElementById("precio-producto").value);
 
     // 3. Validar precio mínimo: si es menor a 500 se muestra una notificación de aviso
-    if (precio < 500) {
+    if (precio < 1000) {
         mostrarNotificacion("El precio debe ser mayor o igual a $500.", "aviso");
         return; // Detiene la ejecución de la función
     }

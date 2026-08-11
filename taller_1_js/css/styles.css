@@ -216,14 +216,3 @@ body {
     background-color: #e67e22; /* Fondo naranja */
 }
 
-/* Animación con la que aparecen las notificaciones */
-@keyframes aparecer {
-    from {
-        opacity: 0;                 /* Inicia invisible */
-        transform: translateY(-10px); /* Inicia desplazada hacia arriba */
-    }
-    to {
-        opacity: 1;                 /* Termina visible */
-        transform: translateY(0);   /* Termina en su posición normal */
-    }
-}
