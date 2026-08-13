@@ -23,8 +23,10 @@ body {
     align-items: center;        /* Centra los elementos verticalmente */
     background-color: #201f1f;  /* Fondo oscuro */
     color: white;               /* Texto blanco */
-    padding: 1rem 2rem;         /* Relleno interno (arriba/abajo 1rem, izquierda/derecha 2rem) */
-    position: relative;         /* Referencia para posicionar el carrito flotante */
+    padding: 1rem 2rem;         /* Relleno interno (arriba/abajo 1rem, izquierda/derecha 2rem) */      
+    position: sticky;           /* Permite que el encabezado se quede fijo al hacer scroll */
+    top: 0;                     /* Se pega a la parte superior de la ventana */
+    z-index: 100;               /* Se mantiene por encima de otros elementos */
 }
 
 /* Contenedor del icono y del desplegable del carrito */
@@ -93,19 +95,48 @@ body {
 }
 
 /* Portada y Secciones: centraliza el contenido principal */
-.portada, .seccion-tienda, .seccion-agregar-producto {
-    max-width: 900px;  /* Ancho máximo para que no se estire en pantallas grandes */
+.seccion-tienda, .seccion-agregar-producto {
+    max-width: 1200px; /* Ancho máximo para que las tarjetas se distribuyan bien */
     margin: 2rem auto; /* Centrado horizontal y margen vertical */
     padding: 1rem;     /* Relleno interno */
-    text-align: center;/* Texto centrado */
+    text-align:left;/* Texto centrado */
+}
+
+.seccion-tienda h2{
+    text-align: center;
+}
+
+.portada {
+    background-color: #201f1f;
+    color: white; /* Añadido para que el texto sea visible con el fondo oscuro */
+    
+    /* Activamos Flexbox */
+    display: flex;
+    justify-content: space-between; /* Texto a la izquierda, imagen a la derecha */
+    align-items: center; /* Centra el texto y la imagen verticalmente */
+    
+    /* Espaciado y dimensiones */
+    padding: 20px;
+    gap: 20px; /* Separación horizontal entre texto e imagen */
+    max-width: 1200px; /* Ampliado un poco para que quepan texto e imagen cómodamente */
+    margin: 20px auto; /* Centra la sección en la pantalla */
+    border-radius: 8px; /* Opcional: bordes redondeados suaves */
+}
+
+/* Ajustes opcionales para la imagen dentro de la portada */
+.portada-imagen img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 6px;
+    object-fit: cover;
 }
 
 /* Grilla de Productos */
 .grilla-productos {
-    display: grid;                       /* Distribuye los productos en una grilla */
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Columnas adaptables (mínimo 220px cada una) */
-    gap: 1.5rem;                         /* Separación entre tarjetas */
-    margin-top: 1.5rem;                  /* Separación respecto a la sección anterior */
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); /* Crea exactamente 3 columnas de igual tamaño */
+    gap: 2rem; 
+    margin-top: 1.5rem; 
 }
 
 /* Tarjeta de cada producto */
@@ -113,18 +144,21 @@ body {
     background: white;                       /* Fondo blanco */
     border: 1px solid #ddd;                  /* Borde gris claro */
     border-radius: 8px;                      /* Esquinas redondeadas */
-    padding: 1rem;                           /* Relleno interno */
+    padding: 1.5rem;                         /* Relleno interno */
     display: flex;                           /* Flexbox para apilar verticalmente */
     flex-direction: column;                  /* Elementos en columna */
     align-items: center;                     /* Centrados horizontalmente */
+    justify-content: space-between;          /* Distribuye el contenido verticalmente */
 }
 
 /* Imagen dentro de la tarjeta de producto */
 .tarjeta-producto img {
     width: 100%;            /* Ocupa todo el ancho de la tarjeta */
-    height: 140px;          /* Alto fijo */
-    object-fit: cover;      /* Recorta sin deformar */
-    border-radius: 4px;     /* Esquinas ligeramente redondeadas */
+    height: 300px;          /* Alto más grande (antes era 140px) */
+    object-fit: cover;      /* Recorta proporcionalmente sin estirar ni deformar */
+    object-position: center;/* Centra el enfoque de la imagen al recortar */
+    border-radius: 8px;     /* Bordes redondeados más elegantes */
+    display: block;         /* Elimina espacios blancos no deseados debajo de la imagen */
 }
 
 /* Lista de características del producto */
@@ -216,3 +250,6 @@ body {
     background-color: #e67e22; /* Fondo naranja */
 }
 
+.seccion-agregar-producto h2 {
+    text-align: center; /* Centra el título del formulario */
+}

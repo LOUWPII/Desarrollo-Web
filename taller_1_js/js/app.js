@@ -9,7 +9,7 @@ const productos = [
         id: 1,
         nombre: "Curso de Python",
         precio: 25000,
-        imagen: "https://via.placeholder.com/150",
+        imagen: "https://media.licdn.com/dms/image/v2/D4E10AQGLIyjDoT9UFg/image-shrink_800/B4EZyAfboxIkAg-/0/1771682249629?e=2147483647&v=beta&t=FBVlGD4WBdQaeEzCr7noIiFdo3c0C7k9DVfi_NYk6E0",
         atributo1: "Programación",
         atributo2: "Backend",
         atributo3: "Nivel Inicial"
@@ -18,10 +18,19 @@ const productos = [
         id: 2,
         nombre: "Libro JavaScript",
         precio: 15000,
-        imagen: "https://via.placeholder.com/150",
+        imagen: "https://images.cdn3.buscalibre.com/fit-in/360x360/f7/66/f766113105ada20fd8b0ade05a8d0871.jpg",
         atributo1: "Libros",
         atributo2: "Desarrollo Web",
         atributo3: "Tapa Blanda"
+    },
+    {
+        id: 3,
+        nombre: "Curso de HTML/CSS",
+        precio: 20000,
+        imagen: "https://images.cdn2.buscalibre.com/fit-in/360x360/09/11/0911b543d7630c4ad730ae5cf7327b99.jpg",
+        atributo1: "Programación",
+        atributo2: "Frontend",
+        atributo3: "Nivel Intermedio"
     }
 ];
 
@@ -202,9 +211,9 @@ function manejarNuevoProducto(evento) {
     const imagen = document.getElementById("imagen-producto").value;
     const precio = Number(document.getElementById("precio-producto").value);
 
-    // 3. Validar precio mínimo: si es menor a 500 se muestra una notificación de aviso
+    // 3. Validar precio mínimo: si es menor a 1000 se muestra una notificación de aviso
     if (precio < 1000) {
-        mostrarNotificacion("El precio debe ser mayor o igual a $500.", "aviso");
+        mostrarNotificacion("El precio debe ser mayor o igual a $1000.", "aviso");
         return; // Detiene la ejecución de la función
     }
 
